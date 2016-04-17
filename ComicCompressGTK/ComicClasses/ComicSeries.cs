@@ -58,7 +58,7 @@ namespace ComicCompressPortable.ComicClasses
         }
         public void MoveComic(Comic comic, int destination)
         {
-            throw new NotImplementedException();//TODO
+            throw new NotImplementedException();//TODO MoveComic
         }
     }
 }

@@ -272,10 +272,22 @@ public partial class MainWindow: Gtk.Window
         if (response == (int)ResponseType.Accept)
         {
 
-            series = comicCompresser.GetComicSeriesFromDirectory(folderDialog.Filename);
+            try
+            {
+                series = comicCompresser.GetComicSeriesFromDirectory(folderDialog.Filename);
+                RefreshFormControls();
+            }
+            catch (Exception)
+            {
+                MessageDialog md = new MessageDialog((Window)this, DialogFlags.Modal, MessageType.Error, ButtonsType.Ok, "Not a valid comic");
+                md.Run();
+                md.Destroy();
 
-            RefreshFormControls();
-
+                series = new ComicSeries();
+                selectedComic = null;
+                RefreshFormControls();
+            }
+            
         }
 
         folderDialog.Destroy();
@@ -287,15 +299,31 @@ public partial class MainWindow: Gtk.Window
         if (response == (int)ResponseType.Accept)
         {
 
-            series.Comics.AddRange(comicCompresser.GetComicSeriesFromDirectory(folderDialog.Filename).Comics);
-
-            if (series.Title == null)
+            try
             {
-                series.Title = System.IO.Path.GetFileNameWithoutExtension(folderDialog.Filename);
+                series.Comics.AddRange(comicCompresser.GetComicSeriesFromDirectory(folderDialog.Filename).Comics);
 
+                if (series.Title == null)
+                {
+                    series.Title = System.IO.Path.GetFileNameWithoutExtension(folderDialog.Filename);
+
+                }
+
+                RefreshFormControls();
+            }
+            catch (Exception)
+            {
+
+                MessageDialog md = new MessageDialog((Window)this, DialogFlags.Modal, MessageType.Error, ButtonsType.Ok, "Not a valid comic");
+                md.Run();
+                md.Destroy();
+
+                series = new ComicSeries();
+                selectedComic = null;
+                RefreshFormControls();
             }
 
-            RefreshFormControls();
+            
 
         }
 
@@ -308,14 +336,29 @@ public partial class MainWindow: Gtk.Window
         int response = folderDialog.Run();
         if (response == (int)ResponseType.Accept)
         {
-            series.Comics.AddRange(comicCompresser.GetComicSeriesFromArchive(folderDialog.Filename).Comics);
-
-            if (series.Title == null)
+            try
             {
-                series.Title = System.IO.Path.GetFileNameWithoutExtension(folderDialog.Filename);
+                series.Comics.AddRange(comicCompresser.GetComicSeriesFromArchive(folderDialog.Filename).Comics);
 
+                if (series.Title == null)
+                {
+                    series.Title = System.IO.Path.GetFileNameWithoutExtension(folderDialog.Filename);
+
+                }
+                RefreshFormControls();
             }
-            RefreshFormControls();
+            catch (Exception)
+            {
+
+                MessageDialog md = new MessageDialog((Window)this, DialogFlags.Modal, MessageType.Error, ButtonsType.Ok, "Not a valid comic");
+                md.Run();
+                md.Destroy();
+
+                series = new ComicSeries();
+                selectedComic = null;
+                RefreshFormControls();
+            }
+            
 
         }
 
