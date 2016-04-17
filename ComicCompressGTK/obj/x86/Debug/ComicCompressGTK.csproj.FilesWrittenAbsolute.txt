@@ -1,0 +1,8 @@
+/media/robert/Data/Users/Robert/Documents/Development/Linux Development/MonoDevelop/ComicCompressGTK/ComicCompressGTK/obj/x86/Debug/.NETFramework,Version=v4.5.AssemblyAttribute.cs
+/media/robert/Data/Users/Robert/Documents/Development/Linux Development/MonoDevelop/ComicCompressGTK/ComicCompressGTK/obj/x86/Debug/ComicCompressGTK.gtk-gui.gui.stetic
+/media/robert/Data/Users/Robert/Documents/Development/Linux Development/MonoDevelop/ComicCompressGTK/ComicCompressGTK/bin/Debug/ComicCompressGTK.exe.mdb
+/media/robert/Data/Users/Robert/Documents/Development/Linux Development/MonoDevelop/ComicCompressGTK/ComicCompressGTK/bin/Debug/ComicCompressGTK.exe
+/media/robert/Data/Users/Robert/Documents/Development/Linux Development/MonoDevelop/ComicCompressGTK/ComicCompressGTK/obj/x86/Debug/ComicCompressGTK.exe
+/media/robert/Data/Users/Robert/Documents/Development/Linux Development/MonoDevelop/ComicCompressGTK/ComicCompressGTK/obj/x86/Debug/ComicCompressGTK.exe.mdb
+/media/robert/Data/Users/Robert/Documents/Development/Linux Development/MonoDevelop/ComicCompressGTK/ComicCompressGTK/bin/Debug/Ionic.Zip.dll
+/media/robert/Data/Users/Robert/Documents/Development/Linux Development/MonoDevelop/ComicCompressGTK/ComicCompressGTK/bin/Debug/ComicCompressGTK.exe.config
